@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.8.4, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="static/assets/images/images-221x166.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Your Booking</title>
+  <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="static/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="static/assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="static/assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="static/assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="static/assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="static/assets/mobirise/css/mbr-additional.css" type="text/css">
+
+  
+  
+
+</head>
+<body>
+  
+    <section data-bs-version="5.1" class="menu cid-s48OLK6784" once="menu" id="menu1-p">
+    
+        <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+            <div class="container">
+                <div class="navbar-brand">
+                    <span class="navbar-logo">
+                        <a href="/">
+                            <img src="../static/assets/images/images-221x166.png" alt="" style="height: 3.8rem;">
+                        </a>
+                    </span>
+                    <span class="navbar-caption-wrap"><a class="navbar-caption text-warning display-7" href="/">DRIVE NOW</a></span>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link text-primary dropdown-toggle display-7" href="\login" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                {% if 'username' in session %}
+                                    {{username}}
+                                {% else %}
+                                    My Account
+                                {% endif %}
+                            </a>
+                                {% if 'username' in session %}
+                                <div class="dropdown-menu" aria-labelledby="dropdown-261">
+                                    <a class="text-primary dropdown-item display-7" href="/mybookings">My Bookings</a>
+                                    <a class="text-primary dropdown-item display-7" href="/logout">Logout</a>
+                                </div>
+                                {% else %}
+                                <div class="dropdown-menu" aria-labelledby="dropdown-261">
+                                    <a class="text-primary dropdown-item display-7" href="/login">Login</a>
+                                </div>
+                                {% endif %}
+                            </li>
+                        </ul>
+                    
+                    
+                </div>
+            </div>
+        </nav>
+    
+    </section>
+
+<section data-bs-version="5.1" class="header4 cid-tAG5G69IRS mbr-fullscreen" id="header4-o">
+    <div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-3"><strong>Your Booking</strong></h3>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <style>
+                .content-table
+                {
+                    border-collapse: collapse;
+                    margin: 25px 0;
+                    font-size: 0.6cm;
+                    min-width: 400px;
+                    border-radius: 5px 5px 0 0;
+                    overflow: hidden;
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 15);
+                }
+                .content-table thead tr
+                {
+                    background-color: #000000;
+                    color: #969b2b;
+                    text-align: center;
+                    font-weight: bold;
+                }
+
+                .content-table th
+                {
+                    padding: 12px 15px;
+                    color: #a6bb2f;
+                }
+
+                .content-table td
+                {
+                    padding: 12px 15px;
+                    color: #000000;
+                    text-align: center;
+                }
+
+                .content-table tbody tr
+                {
+                    border-bottom: 1px solid #dddddd;
+                }
+
+                .content-table tbody tr:nth-of-type(even)
+                {
+                    background-color: rgba(205, 235, 219, 0.7)
+                }
+
+                .content-table tbody tr:last-of-type
+                {
+                    border-bottom: 2px solid #000000;
+                    background-color: rgba(205, 235, 219, 0.7)
+                }
+
+                .content-table tbody tr.active-row
+                {
+                    font-weight: bold;
+                    color: #000000;
+                    background-color: rgba(205, 235, 219, 0.7)
+                }
+
+            </style>
+            <table class="content-table">
+                <thead>
+                    <th>Booking ID</th>
+                    <th>Customer Name</th>
+                    <th>Car Booked</th>
+                    <th>Pick-up Date</th>
+                    <th>Drop time</th>
+                    <th>Total Fare</th>
+                    
+                </thead>
+                <tbody>
+                {% for current_user_bookings in booking_data %}
+                    <tr>
+                        <td>{{current_user_bookings['BookingId']}}</td>
+                        <td>{{current_user_bookings['username']}}</td>
+                        <td>{{current_user_bookings['CarBooked']}}</td>
+                        <td>{{current_user_bookings['booking_start_date']}}</td>
+                        <td>{{current_user_bookings['booking_end_date']}}</td>
+                        <td>{{current_user_bookings['Amount']}}</td>
+                    </tr>
+                {% endfor %}  
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
+            
+            <button class="btn btn-primary display-4" onclick="window.print()">Download Receipt</button>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="footer3 cid-s48P1Icc8J mbr-reveal" once="footers" id="footer3-i">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="row row-links">
+                <ul class="foot-menu">
+                    
+                    
+                    
+                    
+                    
+                <li class="foot-menu-item mbr-fonts-style display-7">About Our Company</li><li class="foot-menu-item mbr-fonts-style display-7">Contact Us</li><li class="foot-menu-item mbr-fonts-style display-7">Frequently Asked Questions</li></ul>
+            </div>
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+                    
+                    
+                    
+                    
+                    
+                    
+                <div class="soc-item">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                            <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://www.youtube.com/c/mobirise" target="_blank">
+                            <span class="socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://instagram.com/mobirise" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                        </a>
+                    </div></div>
+            </div>
+            <div class="row row-copirayt">
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                    © Copyright 2023 Lift Mate. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="../static/assets/bootstrap/js/bootstrap.bundle.min.js"></script>  
+<script src="../static/assets/smoothscroll/smooth-scroll.js"></script>  
+<script src="../static/assets/ytplayer/index.js"></script>  
+<script src="../static/assets/dropdown/js/navbar-dropdown.js"></script>  
+<script src="../static/assets/theme/js/script.js"></script>  
+  
+</body>
+</html>

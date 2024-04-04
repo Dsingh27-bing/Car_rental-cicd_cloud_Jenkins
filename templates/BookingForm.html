@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.8.4, mobirise.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="../static/assets/images/images-221x166.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>User Information</title>
+  <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../static/assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="../static/assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="../static/assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="../static/assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="../static/assets/mobirise/css/mbr-additional.css" type="text/css">
+
+  
+  
+
+</head>
+<body>
+  
+  <section data-bs-version="5.1" class="menu cid-s48OLK6784" once="menu" id="menu1-p">
+    
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="/">
+                        <img src="../static/assets/images/images-221x166.png" alt="" style="height: 3.8rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-warning display-7" href="/">DRIVE NOW</a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item dropdown"><a class="nav-link link text-primary dropdown-toggle display-7" href="\login" data-toggle="dropdown-submenu" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">{% if 'username' in session %}{{username}}{% else %}My Account{% endif %}</a>{% if 'username' in session %}<div class="dropdown-menu" aria-labelledby="dropdown-261"><a class="text-primary dropdown-item display-7" href="/logout">Logout</a></div>{% else %}<div class="dropdown-menu" aria-labelledby="dropdown-261"><a class="text-primary dropdown-item display-7" href="/login">Login</a></div>{% endif %}</li></ul>
+                
+                
+            </div>
+        </div>
+    </nav>
+
+</section>
+
+<section data-bs-version="5.1" class="header4 cid-tAG5G69IRS mbr-fullscreen" id="header4-o">
+    
+    
+    <div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Booking Details</strong></h3>
+            
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-lg-8 mx-auto mbr-form" data-form-type="formoid">
+                <form action="/yourbooking" method="POST" class="mbr-form form-with-styler" data-form-title="Form Name"><input type="hidden" name="email" data-form-email="true" value="wb3MXvMUIQpkQ/9uF4GDKFpQHlyXNHORlZRamazY1Y9SCCZjJrrKmxm2/eG/7RgKO2DKtgJkcyQt6+QJqJM15H/aqZ8FcydpnlolBa/0rH/cZEKQ28SyyMMJAXVx1xxO">
+                    <div class="row">
+                        <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Thanks for filling out the form!</div>
+                        <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
+                            Oops...! some problem!
+                        </div>
+                    </div>
+                    <div class="dragArea row">
+                        <label mbr-section-title mbr-fonts-style align-center mb-0 display-2 style="color:#FFFFFF"><strong> Booking ID: </strong></label>
+                        <div class="col-sm-12 form-group mb-3" data-for="id">
+                            <input type="text" name="BookingId" placeholder="Booking ID" data-form-field="id" class="form-control" value="{{booking_id}}" id="id-form5-r" readonly>
+                        </div>
+                        <label mbr-section-title mbr-fonts-style align-center mb-0 display-2 style="color:#FFFFFF"><strong> Full Name: </strong></label>
+                        <div class="col-sm-12 form-group mb-3" data-for="name">
+                            <input type="text" name="FirstName" placeholder="Name" data-form-field="name" class="form-control" value="{{ document['name'] }}" id="name-form5-r">
+                        </div>
+                        <label mbr-section-title mbr-fonts-style align-center mb-0 display-2 style="color:#FFFFFF"><strong> Email ID: </strong></label>
+                        <div class="col-sm-12 form-group mb-3" data-for="email">
+                            <input type="text" name="Email" placeholder="E-mail" data-form-field="email" class="form-control" value="{{ document['email'] }}" id="email-form5-r">
+                        </div>
+                        <label mbr-section-title mbr-fonts-style align-center mb-0 display-2 style="color:#FFFFFF"><strong> Contact Number: </strong></label>
+                        <div class="col-sm-12 form-group mb-3" data-for="pno">
+                            <input type="text" name="ContactNumber" placeholder="Phone-Number" data-form-field="pno" class="form-control" value="{{ document['Contact Number'] }}" id="email-form5-r">
+                        </div>
+                        <label mbr-section-title mbr-fonts-style align-center mb-0 display-2 style="color:#FFFFFF"><strong> Car Name: </strong></label>
+                        <div class="col-sm-12 form-group mb-3" data-for="carbooked">
+                            <input type="text" name="CarBooked" placeholder="Car Booked" data-form-field="carbooked" class="form-control" value="{{ car_book['car_actual_name'] }}" id="carbooked-form5-r" readonly>
+                        </div>
+                        <label mbr-section-title mbr-fonts-style align-center mb-0 display-2 style="color:#FFFFFF"><strong> From Date: </strong></label>
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="intime">
+                            <input type="text" name="InTime" placeholder="Check-In Time" data-form-field="intime" class="form-control" value="{{ from_date }}" id="intime-form5-r" readonly>
+                        </div>
+                        <label mbr-section-title mbr-fonts-style align-center mb-0 display-2 style="color:#FFFFFF"><strong> To Date: </strong></label>
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="outtime">
+                            <input type="text" name="OutTime" placeholder="Check-Out Time" data-form-field="outtime" class="form-control" value="{{ to_date }}" id="outtime-form5-r" readonly>
+                        </div>
+                        <label mbr-section-title mbr-fonts-style align-center mb-0 display-2 style="color:#FFFFFF"><strong> Number of Days: </strong></label>
+                        <div class="col-md col-sm-12 form-group mb-3" data-for="days">
+                            <input type="text" name="NumberOfDays" placeholder="Days" data-form-field="days" class="form-control" value="{{ num_days }}" id="days-form5-r" readonly>
+                        </div>
+                        <label mbr-section-title mbr-fonts-style align-center mb-0 display-2 style="color:#FFFFFF"><strong> Amount: </strong></label>
+                        <div class="col-sm-12 form-group mb-3" data-for="amount">
+                            <input type="text" name="Amount" placeholder="Amount" data-form-field="amount" class="form-control" value="{{ amount }}" id="amount-form5-r" readonly>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn"><button type="submit" class="btn btn-primary display-4">Confirm and Book</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section data-bs-version="5.1" class="footer3 cid-s48P1Icc8J mbr-reveal" once="footers" id="footer3-i">
+
+    
+
+    
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="row row-links">
+                <ul class="foot-menu">
+                    
+                    
+                    
+                    
+                    
+                <li class="foot-menu-item mbr-fonts-style display-7">About Our Company</li><li class="foot-menu-item mbr-fonts-style display-7">Contact Us</li><li class="foot-menu-item mbr-fonts-style display-7">Frequently Asked Questions</li></ul>
+            </div>
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+                    
+                    
+                    
+                    
+                    
+                    
+                <div class="soc-item">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://www.facebook.com/pages/Mobirise/1616226671953247" target="_blank">
+                            <span class="socicon-facebook socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://www.youtube.com/c/mobirise" target="_blank">
+                            <span class="socicon-youtube socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://instagram.com/mobirise" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                        </a>
+                    </div></div>
+            </div>
+            <div class="row row-copirayt">
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                    © Copyright 2023 Drive Now. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="../static/assets/bootstrap/js/bootstrap.bundle.min.js"></script>  
+<script src="../static/assets/smoothscroll/smooth-scroll.js"></script>  
+<script src="../static/assets/ytplayer/index.js"></script>  
+<script src="../static/assets/dropdown/js/navbar-dropdown.js"></script>  
+<script src="../static/assets/theme/js/script.js"></script>  
+  
+</body>
+</html>
