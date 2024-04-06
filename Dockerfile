@@ -14,6 +14,7 @@ RUN pip3 install cython
 RUN pip3 install --upgrade setuptools
 RUN pip3 install pandas
 RUN pip3 install flask
+RUN pip3 install pymongo
 RUN pip3 install numpy
 COPY . ./.
 RUN /bin/sh -c pip3 install -r requirements.txt
