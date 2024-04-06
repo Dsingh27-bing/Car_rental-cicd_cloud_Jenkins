@@ -1,0 +1,33 @@
+1) Create a new Job
+2) Enter the name of the project - testing
+3) select freestyle pipeline, click on ok
+4) select github project and enter the url to your repository.
+5) under Source Code Management, select git, enter github url and credentials. (you can save credentials in jenkins or can create new credentials. choose userid and password)
+6) Under branches to build, check if your branch name is master or main and enter accordingly.
+7) select GitHub hook trigger for GITScm polling (this will do continous Integration) 
+Note: for step 7 you should have webhooks on your github repository like example : http://54.208.167.38:8080/github-webhook/
+8) Under Build steps, add build steps and select execute shell.
+9) execute the below mentioned commands to build docker image and then running the docker image in a container. 
+	docker build -t dimplesingh11/jenkins_termination_project:v2 .
+	docker run -dp 9090:9090 dimplesingh11/jenkins_termination_project:v2
+10) click on apply, then save
+11) now make any change in github repository to view the continuous integration and continuous deployment through Jenkins. 
+
+
+
+
+Possible errors that occur:
+1) in webhooks of github the status remains invalid, redeliver the request come online.
+2) While continuous delivery there will be error with docker daemon socket to resolve this run below commands so that permissions are granted to Jenkins :
+	sudo usermod -aG docker jenkins
+	sudo systemctl restart jenkins
+
+
+Pre- Requisites:
+ 
+1) install git on the server on which you are running Jenkins.
+2) install docker on the server on which you are running Jenkins.
+3) have credentials stored in Jenkins for both github and Docker.
+4) Don't forget to stop the container as everytime CI-CD pipeline is run new image is created and run but as port is same it will give error of port being in use. 
+
+
