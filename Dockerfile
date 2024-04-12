@@ -19,5 +19,5 @@ RUN pip3 install numpy
 COPY . ./.
 RUN /bin/sh -c pip3 install -r requirements.txt
 # Expose the port(s) the app runs on
-EXPOSE 9090
+EXPOSE 443
 CMD mongod --bind_ip=0.0.0.0 & python3 ImportData.py & python3 app.py 
