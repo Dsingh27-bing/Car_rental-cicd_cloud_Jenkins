@@ -3,4 +3,4 @@ Cloud computing projects using ci-cd pipeline
 
 Jenkins CI-CD completed.
 
-Using cloudflare for security enhancement.
+Using cloudflare for security enhancement
