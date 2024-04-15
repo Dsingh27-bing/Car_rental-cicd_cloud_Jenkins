@@ -16,6 +16,7 @@ RUN pip3 install pandas
 RUN pip3 install flask
 RUN pip3 install pymongo[srv]
 RUN pip3 install numpy
+RUN pip3 install xlrd
 COPY . ./.
 RUN /bin/sh -c pip3 install -r requirements.txt
 # Expose the port(s) the app runs on
